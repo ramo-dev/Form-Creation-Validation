@@ -1,3 +1,6 @@
+document.addEventListener("DOMContentLoaded", fetchUserData);
+
+
 const dataContainer = document.getElementById("api-data");
 const userList = document.createElement("ul");
 
@@ -15,8 +18,8 @@ async function fetchUserData() {
       });
     dataContainer.appendChild( userList)
   } catch (err) {
-    console.log(err);
+    console.log("Failed to load user data");
   }
 }
 
-document.addEventListener("DOMContentLoaded", fetchUserData);
+
